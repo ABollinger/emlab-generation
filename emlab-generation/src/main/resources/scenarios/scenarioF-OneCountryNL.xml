@@ -388,7 +388,7 @@
 	<!-- ADDED BY ANDY -->
 	<bean id="testPowerPlant" class="emlab.gen.domain.technology.PowerPlant"
 		p:name="testPowerPlant"
-		p:yearFirstOperational="-5"
+		p:yearFirstOperational="2000"
 		p:generators="2"
 		p:substation="Maasvlakte380" >
 		<property name="technology" ref="coalPulverizedSuperCritical" />
@@ -690,7 +690,7 @@
 	<!-- Parameter file -->
 	<bean id="projectPropertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:scenarios/parametersB-OneCountry.properties" />
+		<property name="location" value="classpath:scenarios/parametersF-OneCountryNL.properties" />
 	</bean>
 
 </beans>
