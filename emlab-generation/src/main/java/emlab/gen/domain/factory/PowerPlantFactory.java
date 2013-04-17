@@ -40,9 +40,17 @@ public class PowerPlantFactory implements InitializingBean {
 			PowerGeneratingTechnology technology) {
 		plant.setOwner(energyProducer);
 		plant.setLocation(location);
-		plant.setConstructionStartTime(-(technology.getExpectedLeadtime()
-				+ technology.getExpectedPermittime() + 2013 - plant
-				.getYearFirstOperational()));
+
+		if (plant.getYearFirstOperational() > 0) {
+			plant.setConstructionStartTime(-(technology.getExpectedLeadtime()
+					+ technology.getExpectedPermittime() + 2013 - plant
+					.getYearFirstOperational()));
+		} else {
+			plant.setConstructionStartTime(-(technology.getExpectedLeadtime()
+					+ technology.getExpectedPermittime() + Math.round((Math
+					.random() * technology.getExpectedLifetime()))) + 2);
+		}
+
 		plant.setActualLeadtime(plant.getTechnology().getExpectedLeadtime());
 		plant.setActualPermittime(plant.getTechnology().getExpectedPermittime());
 		plant.setExpectedEndOfLife(plant.getConstructionStartTime()
@@ -51,8 +59,6 @@ public class PowerPlantFactory implements InitializingBean {
 		plant.calculateAndSetActualInvestedCapital(plant
 				.getConstructionStartTime());
 		plant.calculateAndSetActualEfficiency(plant.getConstructionStartTime());
-		plant.setActualNominalCapacity(technology.getCapacity()
-				* plant.getGenerators());
 		plant.setDismantleTime(1000);
 		Loan loan = new Loan().persist();
 		loan.setFrom(energyProducer);

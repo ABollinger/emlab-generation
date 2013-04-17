@@ -386,19 +386,554 @@
 		p:name="Power Plant Maintainer" />
 
 	<!-- ADDED BY ANDY -->
+	<!-- 
 	<bean id="testPowerPlant" class="emlab.gen.domain.technology.PowerPlant"
-		p:name="testPowerPlant"
+		p:label="testPowerPlant"
 		p:yearFirstOperational="2000"
-		p:generators="2"
+		p:actualNominalCapacity="1000"
 		p:substation="Maasvlakte380" >
 		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+	 -->
+	 
+	<bean id="EemsPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EemsPowerplant" p:label="EemsPowerplant" p:actualNominalCapacity="2400" p:yearFirstOperational="1976" p:substation="EemshavenOost" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="AmerPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AmerPowerplant" p:label="AmerPowerplant" p:actualNominalCapacity="1285" p:yearFirstOperational="1980" p:substation="Geertruidenberg" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="HemwegPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HemwegPowerplant" p:label="HemwegPowerplant" p:actualNominalCapacity="1249" p:yearFirstOperational="1978" p:substation="AmsterdamHemweg" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MaasvlaktePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MaasvlaktePowerplant" p:label="MaasvlaktePowerplant" p:actualNominalCapacity="1060" p:yearFirstOperational="1988" p:substation="Maasvlakte" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="Maximacentrale" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="Maximacentrale" p:label="Maximacentrale" p:actualNominalCapacity="996" p:yearFirstOperational="0" p:substation="Lelystad" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="SloecentralePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="SloecentralePowerplant" p:label="SloecentralePowerplant" p:actualNominalCapacity="870" p:yearFirstOperational="2009" p:substation="Borssele" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="EnecoGenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EnecoGenPowerplant" p:label="EnecoGenPowerplant" p:actualNominalCapacity="870" p:yearFirstOperational="2011" p:substation="Maasvlakte" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="VelsenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="VelsenPowerplant" p:label="VelsenPowerplant" p:actualNominalCapacity="860" p:yearFirstOperational="1986" p:substation="Velsen" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="RijnmondEnergiePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="RijnmondEnergiePowerplant" p:label="RijnmondEnergiePowerplant" p:actualNominalCapacity="820" p:yearFirstOperational="2004" p:substation="RotterdamWaalhaven" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MaasvlakteElectrabelPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MaasvlakteElectrabelPowerplant" p:label="MaasvlakteElectrabelPowerplant" p:actualNominalCapacity="800" p:yearFirstOperational="2013" p:substation="Maasvlakte" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="WKCMoerdijkPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="WKCMoerdijkPowerplant" p:label="WKCMoerdijkPowerplant" p:actualNominalCapacity="800" p:yearFirstOperational="1997" p:substation="WKCMoerdijk" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BergumPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BergumPowerplant" p:label="BergumPowerplant" p:actualNominalCapacity="664" p:yearFirstOperational="1975" p:substation="Bergum" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="ClausPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="ClausPowerplant" p:label="ClausPowerplant" p:actualNominalCapacity="640" p:yearFirstOperational="1977" p:substation="Maasbracht" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="GelderlandPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="GelderlandPowerplant" p:label="GelderlandPowerplant" p:actualNominalCapacity="585" p:yearFirstOperational="0" p:substation="Nijmegen" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="AkzoDelestoPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AkzoDelestoPowerplant" p:label="AkzoDelestoPowerplant" p:actualNominalCapacity="530" p:yearFirstOperational="0" p:substation="DelfzijlDelesto" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BorsselePowerplantNuclear" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BorsselePowerplantNuclear" p:label="BorsselePowerplantNuclear" p:actualNominalCapacity="504" p:yearFirstOperational="1973" p:substation="Borssele" > 
+		<property name="technology" ref="nuclearPGT" />
+	</bean>
+
+	<bean id="ElstaPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="ElstaPowerplant" p:label="ElstaPowerplant" p:actualNominalCapacity="480" p:yearFirstOperational="0" p:substation="Terneuzen" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MaasstroomEnergiePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MaasstroomEnergiePowerplant" p:label="MaasstroomEnergiePowerplant" p:actualNominalCapacity="428" p:yearFirstOperational="2010" p:substation="RotterdamWaalhaven" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MerwedekanaalPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MerwedekanaalPowerplant" p:label="MerwedekanaalPowerplant" p:actualNominalCapacity="421" p:yearFirstOperational="0" p:substation="sGraveland" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BorsselePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BorsselePowerplant" p:label="BorsselePowerplant" p:actualNominalCapacity="418" p:yearFirstOperational="1972" p:substation="Borssele" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="HarculoPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HarculoPowerplant" p:label="HarculoPowerplant" p:actualNominalCapacity="349" p:yearFirstOperational="0" p:substation="Harculo" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MoerdijkAfvalEnergieCentrale" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MoerdijkAfvalEnergieCentrale" p:label="MoerdijkAfvalEnergieCentrale" p:actualNominalCapacity="340" p:yearFirstOperational="0" p:substation="WKCMoerdijk" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="LageWeidePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="LageWeidePowerplant" p:label="LageWeidePowerplant" p:actualNominalCapacity="266" p:yearFirstOperational="1978" p:substation="sGraveland" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="DiemenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DiemenPowerplant" p:label="DiemenPowerplant" p:actualNominalCapacity="266" p:yearFirstOperational="1995" p:substation="Diemen" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="WillemAlexanderPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="WillemAlexanderPowerplant" p:label="WillemAlexanderPowerplant" p:actualNominalCapacity="253" p:yearFirstOperational="1993" p:substation="Buggenum" > 
+		<property name="technology" ref="coalPulverizedSuperCritical" />
+	</bean>
+
+	<bean id="RotterdamWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="RotterdamWpPowerplant" p:label="RotterdamWpPowerplant" p:actualNominalCapacity="240" p:yearFirstOperational="0" p:substation="RotterdamZuidwijk" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="SwentiboldPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="SwentiboldPowerplant" p:label="SwentiboldPowerplant" p:actualNominalCapacity="225" p:yearFirstOperational="0" p:substation="Lutterade" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="RocarotterdamPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="RocarotterdamPowerplant" p:label="RocarotterdamPowerplant" p:actualNominalCapacity="220" p:yearFirstOperational="0" p:substation="Ommoord" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="GalileistraatPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="GalileistraatPowerplant" p:label="GalileistraatPowerplant" p:actualNominalCapacity="210" p:yearFirstOperational="1988" p:substation="RotterdamMarconistraat" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="LelystadWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="LelystadWpPowerplant" p:label="LelystadWpPowerplant" p:actualNominalCapacity="153" p:yearFirstOperational="0" p:substation="Zuiderveld" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="PernisExtensionPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="PernisExtensionPowerplant" p:label="PernisExtensionPowerplant" p:actualNominalCapacity="130" p:yearFirstOperational="0" p:substation="RotterdamWaalhaven" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="PernisRefineryPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="PernisRefineryPowerplant" p:label="PernisRefineryPowerplant" p:actualNominalCapacity="130" p:yearFirstOperational="0" p:substation="RotterdamWaalhaven" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="IjmuidenUnaPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="IjmuidenUnaPowerplant" p:label="IjmuidenUnaPowerplant" p:actualNominalCapacity="130" p:yearFirstOperational="0" p:substation="Velsen" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="WkcAlmerePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="WkcAlmerePowerplant" p:label="WkcAlmerePowerplant" p:actualNominalCapacity="128" p:yearFirstOperational="1987" p:substation="sGraveland" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="DongePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DongePowerplant" p:label="DongePowerplant" p:actualNominalCapacity="121" p:yearFirstOperational="1976" p:substation="Oosteind" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MiddenmeerWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MiddenmeerWpPowerplant" p:label="MiddenmeerWpPowerplant" p:actualNominalCapacity="120" p:yearFirstOperational="0" p:substation="Westwoud" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="PrinsesAmaliapark" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="PrinsesAmaliapark" p:label="PrinsesAmaliapark" p:actualNominalCapacity="120" p:yearFirstOperational="0" p:substation="Velsen" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="ZeewoldeWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="ZeewoldeWpPowerplant" p:label="ZeewoldeWpPowerplant" p:actualNominalCapacity="108" p:yearFirstOperational="0" p:substation="Zeewolde" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="NoordzeeWindPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="NoordzeeWindPowerplant" p:label="NoordzeeWindPowerplant" p:actualNominalCapacity="108" p:yearFirstOperational="0" p:substation="Velsen" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="BotlekRefineryPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BotlekRefineryPowerplant" p:label="BotlekRefineryPowerplant" p:actualNominalCapacity="104" p:yearFirstOperational="0" p:substation="RotterdamCentrum" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="AviAmsterdamPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AviAmsterdamPowerplant" p:label="AviAmsterdamPowerplant" p:actualNominalCapacity="104" p:yearFirstOperational="0" p:substation="AmsterdamHemweg" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="DenHaagPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DenHaagPowerplant" p:label="DenHaagPowerplant" p:actualNominalCapacity="95" p:yearFirstOperational="0" p:substation="DenHaag" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="DelftPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DelftPowerplant" p:label="DelftPowerplant" p:actualNominalCapacity="94" p:yearFirstOperational="1974" p:substation="Delft" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="LeidenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="LeidenPowerplant" p:label="LeidenPowerplant" p:actualNominalCapacity="83" p:yearFirstOperational="0" p:substation="Leiden" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="RozenburgEurogenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="RozenburgEurogenPowerplant" p:label="RozenburgEurogenPowerplant" p:actualNominalCapacity="80" p:yearFirstOperational="0" p:substation="Westerlee" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="MaasvlakteUcmlPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MaasvlakteUcmlPowerplant" p:label="MaasvlakteUcmlPowerplant" p:actualNominalCapacity="80" p:yearFirstOperational="0" p:substation="Maasvlakte" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="AkzoHengeloPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AkzoHengeloPowerplant" p:label="AkzoHengeloPowerplant" p:actualNominalCapacity="80" p:yearFirstOperational="1935" p:substation="HengeloSalinco" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BatTerminalPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BatTerminalPowerplant" p:label="BatTerminalPowerplant" p:actualNominalCapacity="78" p:yearFirstOperational="0" p:substation="AmsterdamHemweg" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="DelfzijlZuid2Powerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DelfzijlZuid2Powerplant" p:label="DelfzijlZuid2Powerplant" p:actualNominalCapacity="75" p:yearFirstOperational="0" p:substation="DelfzijlDelesto" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="PurmerendPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="PurmerendPowerplant" p:label="PurmerendPowerplant" p:actualNominalCapacity="72" p:yearFirstOperational="1989" p:substation="Wijdewormer" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="HVCAfvalcentraleAlkmaar" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HVCAfvalcentraleAlkmaar" p:label="HVCAfvalcentraleAlkmaar" p:actualNominalCapacity="68" p:yearFirstOperational="0" p:substation="Oterleek" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="EmmtecPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EmmtecPowerplant" p:label="EmmtecPowerplant" p:actualNominalCapacity="67" p:yearFirstOperational="0" p:substation="Vroomshoop" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="KlazinaveenGasedonPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="KlazinaveenGasedonPowerplant" p:label="KlazinaveenGasedonPowerplant" p:actualNominalCapacity="63" p:yearFirstOperational="0" p:substation="Klazinaveen" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="WKCEricaPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="WKCEricaPowerplant" p:label="WKCEricaPowerplant" p:actualNominalCapacity="63" p:yearFirstOperational="0" p:substation="Erica" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="GrowindPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="GrowindPowerplant" p:label="GrowindPowerplant" p:actualNominalCapacity="63" p:yearFirstOperational="0" p:substation="EemshavenConverterstation" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="AkzoIjsselmijPlantPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AkzoIjsselmijPlantPowerplant" p:label="AkzoIjsselmijPlantPowerplant" p:actualNominalCapacity="60" p:yearFirstOperational="0" p:substation="HengeloSalinco" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="EnschedePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EnschedePowerplant" p:label="EnschedePowerplant" p:actualNominalCapacity="60" p:yearFirstOperational="0" p:substation="EnschedeVechtstraat" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="EindhovenPhillipsPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EindhovenPhillipsPowerplant" p:label="EindhovenPhillipsPowerplant" p:actualNominalCapacity="55" p:yearFirstOperational="0" p:substation="EindhovenNoord" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="DeBjirmenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DeBjirmenPowerplant" p:label="DeBjirmenPowerplant" p:actualNominalCapacity="49" p:yearFirstOperational="1995" p:substation="Herbayum" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="GaviWijsterPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="GaviWijsterPowerplant" p:label="GaviWijsterPowerplant" p:actualNominalCapacity="48" p:yearFirstOperational="1995" p:substation="WijsterGAVI" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="EemsmondPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EemsmondPowerplant" p:label="EemsmondPowerplant" p:actualNominalCapacity="48" p:yearFirstOperational="0" p:substation="WinsumRanum" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="ParencoPaperMillPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="ParencoPaperMillPowerplant" p:label="ParencoPaperMillPowerplant" p:actualNominalCapacity="45" p:yearFirstOperational="0" p:substation="Renkum" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="TerneuzenwpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="TerneuzenwpPowerplant" p:label="TerneuzenwpPowerplant" p:actualNominalCapacity="44" p:yearFirstOperational="1969" p:substation="Terneuzen" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="WkcAirProductsPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="WkcAirProductsPowerplant" p:label="WkcAirProductsPowerplant" p:actualNominalCapacity="43" p:yearFirstOperational="2002" p:substation="Westerlee" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="DrontenWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DrontenWpPowerplant" p:label="DrontenWpPowerplant" p:actualNominalCapacity="41" p:yearFirstOperational="0" p:substation="Dronten" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="VelsenMillPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="VelsenMillPowerplant" p:label="VelsenMillPowerplant" p:actualNominalCapacity="38" p:yearFirstOperational="0" p:substation="Velsen" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="BiddinghuizenWpPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BiddinghuizenWpPowerplant" p:label="BiddinghuizenWpPowerplant" p:actualNominalCapacity="34" p:yearFirstOperational="0" p:substation="Dronten" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="NoordoostpolderPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="NoordoostpolderPowerplant" p:label="NoordoostpolderPowerplant" p:actualNominalCapacity="33.4" p:yearFirstOperational="0" p:substation="Lemmer" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="BergenOpZoomPnemPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BergenOpZoomPnemPowerplant" p:label="BergenOpZoomPnemPowerplant" p:actualNominalCapacity="33" p:yearFirstOperational="0" p:substation="BergenopZoom" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BergenOpZoomWkcPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BergenOpZoomWkcPowerplant" p:label="BergenOpZoomWkcPowerplant" p:actualNominalCapacity="33" p:yearFirstOperational="1995" p:substation="Woensdrecht" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="HVCAfvalcentraleDordrecht" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HVCAfvalcentraleDordrecht" p:label="HVCAfvalcentraleDordrecht" p:actualNominalCapacity="33" p:yearFirstOperational="0" p:substation="Crayestein" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="DenBoschHeinekenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="DenBoschHeinekenPowerplant" p:label="DenBoschHeinekenPowerplant" p:actualNominalCapacity="32" p:yearFirstOperational="0" p:substation="sHertogenboschNoord" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="shertogenboschPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="shertogenboschPowerplant" p:label="shertogenboschPowerplant" p:actualNominalCapacity="32" p:yearFirstOperational="0" p:substation="sHertogenboschNoord" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="AviraWtePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AviraWtePowerplant" p:label="AviraWtePowerplant" p:actualNominalCapacity="31" p:yearFirstOperational="0" p:substation="Arnhem" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="AmsterdamHarborPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AmsterdamHarborPowerplant" p:label="AmsterdamHarborPowerplant" p:actualNominalCapacity="27" p:yearFirstOperational="0" p:substation="AmsterdamHoogteKadijk" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="HelmondPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HelmondPowerplant" p:label="HelmondPowerplant" p:actualNominalCapacity="25" p:yearFirstOperational="1983" p:substation="HelmondZuid" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="HelmondPromestVkcPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="HelmondPromestVkcPowerplant" p:label="HelmondPromestVkcPowerplant" p:actualNominalCapacity="25" p:yearFirstOperational="0" p:substation="HelmondZuid" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="CuijkBiomassPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="CuijkBiomassPowerplant" p:label="CuijkBiomassPowerplant" p:actualNominalCapacity="25" p:yearFirstOperational="0" p:substation="Gennep" > 
+		<property name="technology" ref="biomassPGT" />
+	</bean>
+
+	<bean id="ZeelandGreenhousePowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="ZeelandGreenhousePowerplant" p:label="ZeelandGreenhousePowerplant" p:actualNominalCapacity="24" p:yearFirstOperational="0" p:substation="GoesDePoel" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="BiddinghuizenWindstPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="BiddinghuizenWindstPowerplant" p:label="BiddinghuizenWindstPowerplant" p:actualNominalCapacity="22" p:yearFirstOperational="0" p:substation="Dronten" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="Ooltgensplaat1Powerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="Ooltgensplaat1Powerplant" p:label="Ooltgensplaat1Powerplant" p:actualNominalCapacity="21" p:yearFirstOperational="0" p:substation="BergenopZoom" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="EemmeerdijkPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="EemmeerdijkPowerplant" p:label="EemmeerdijkPowerplant" p:actualNominalCapacity="18" p:yearFirstOperational="1998" p:substation="Bunschoten" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="LelystadMwPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="LelystadMwPowerplant" p:label="LelystadMwPowerplant" p:actualNominalCapacity="18" p:yearFirstOperational="0" p:substation="Zuiderveld" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="JaapRodenburgPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="JaapRodenburgPowerplant" p:label="JaapRodenburgPowerplant" p:actualNominalCapacity="16.5" p:yearFirstOperational="2000" p:substation="Harselaar" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="MiddenmeerKesgroPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="MiddenmeerKesgroPowerplant" p:label="MiddenmeerKesgroPowerplant" p:actualNominalCapacity="14" p:yearFirstOperational="0" p:substation="Westwoud" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="AlphenPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="AlphenPowerplant" p:label="AlphenPowerplant" p:actualNominalCapacity="14" p:yearFirstOperational="0" p:substation="Tiel" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="TexelTebhinPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="TexelTebhinPowerplant" p:label="TexelTebhinPowerplant" p:actualNominalCapacity="13.6" p:yearFirstOperational="1970" p:substation="AnnaPaulowna" > 
+		<property name="technology" ref="OCGT" />
+	</bean>
+
+	<bean id="SlufterdamWestPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="SlufterdamWestPowerplant" p:label="SlufterdamWestPowerplant" p:actualNominalCapacity="13.5" p:yearFirstOperational="2004" p:substation="Middelburg" > 
+		<property name="technology" ref="windPGT" />
+	</bean>
+
+	<bean id="SlufterdamNoordPowerplant" class="emlab.gen.domain.technology.PowerPlant"
+		p:name="SlufterdamNoordPowerplant" p:label="SlufterdamNoordPowerplant" p:actualNominalCapacity="12" p:yearFirstOperational="0" p:substation="Maasvlakte" > 
+		<property name="technology" ref="windPGT" />
 	</bean>
 
 	<!-- ADDED BY ANDY -->
 	<bean id="nlPowerPlants" class="emlab.gen.domain.factory.PowerPlantFactory">
 		<property name="plants">
 			<set>
-				<ref bean="testPowerPlant" />
+				<ref bean="EemsPowerplant" />
+				<ref bean="AmerPowerplant" />
+				<ref bean="HemwegPowerplant" />
+				<ref bean="MaasvlaktePowerplant" />
+				<ref bean="Maximacentrale" />
+				<ref bean="SloecentralePowerplant" />
+				<ref bean="EnecoGenPowerplant" />
+				<ref bean="VelsenPowerplant" />
+				<ref bean="RijnmondEnergiePowerplant" />
+				<ref bean="MaasvlakteElectrabelPowerplant" />
+				<ref bean="WKCMoerdijkPowerplant" />
+				<ref bean="BergumPowerplant" />
+				<ref bean="ClausPowerplant" />
+				<ref bean="GelderlandPowerplant" />
+				<ref bean="AkzoDelestoPowerplant" />
+				<ref bean="BorsselePowerplantNuclear" />
+				<ref bean="ElstaPowerplant" />
+				<ref bean="MaasstroomEnergiePowerplant" />
+				<ref bean="MerwedekanaalPowerplant" />
+				<ref bean="BorsselePowerplant" />
+				<ref bean="HarculoPowerplant" />
+				<ref bean="MoerdijkAfvalEnergieCentrale" />
+				<ref bean="LageWeidePowerplant" />
+				<ref bean="DiemenPowerplant" />
+				<ref bean="WillemAlexanderPowerplant" />
+				<ref bean="RotterdamWpPowerplant" />
+				<ref bean="SwentiboldPowerplant" />
+				<ref bean="RocarotterdamPowerplant" />
+				<ref bean="GalileistraatPowerplant" />
+				<ref bean="LelystadWpPowerplant" />
+				<ref bean="PernisExtensionPowerplant" />
+				<ref bean="PernisRefineryPowerplant" />
+				<ref bean="IjmuidenUnaPowerplant" />
+				<ref bean="WkcAlmerePowerplant" />
+				<ref bean="DongePowerplant" />
+				<ref bean="MiddenmeerWpPowerplant" />
+				<ref bean="PrinsesAmaliapark" />
+				<ref bean="ZeewoldeWpPowerplant" />
+				<ref bean="NoordzeeWindPowerplant" />
+				<ref bean="BotlekRefineryPowerplant" />
+				<ref bean="AviAmsterdamPowerplant" />
+				<ref bean="DenHaagPowerplant" />
+				<ref bean="DelftPowerplant" />
+				<ref bean="LeidenPowerplant" />
+				<ref bean="RozenburgEurogenPowerplant" />
+				<ref bean="MaasvlakteUcmlPowerplant" />
+				<ref bean="AkzoHengeloPowerplant" />
+				<ref bean="BatTerminalPowerplant" />
+				<ref bean="DelfzijlZuid2Powerplant" />
+				<ref bean="PurmerendPowerplant" />
+				<ref bean="HVCAfvalcentraleAlkmaar" />
+				<ref bean="EmmtecPowerplant" />
+				<ref bean="KlazinaveenGasedonPowerplant" />
+				<ref bean="WKCEricaPowerplant" />
+				<ref bean="GrowindPowerplant" />
+				<ref bean="AkzoIjsselmijPlantPowerplant" />
+				<ref bean="EnschedePowerplant" />
+				<ref bean="EindhovenPhillipsPowerplant" />
+				<ref bean="DeBjirmenPowerplant" />
+				<ref bean="GaviWijsterPowerplant" />
+				<ref bean="EemsmondPowerplant" />
+				<ref bean="ParencoPaperMillPowerplant" />
+				<ref bean="TerneuzenwpPowerplant" />
+				<ref bean="WkcAirProductsPowerplant" />
+				<ref bean="DrontenWpPowerplant" />
+				<ref bean="VelsenMillPowerplant" />
+				<ref bean="BiddinghuizenWpPowerplant" />
+				<ref bean="NoordoostpolderPowerplant" />
+				<ref bean="BergenOpZoomPnemPowerplant" />
+				<ref bean="BergenOpZoomWkcPowerplant" />
+				<ref bean="HVCAfvalcentraleDordrecht" />
+				<ref bean="DenBoschHeinekenPowerplant" />
+				<ref bean="shertogenboschPowerplant" />
+				<ref bean="AviraWtePowerplant" />
+				<ref bean="AmsterdamHarborPowerplant" />
+				<ref bean="HelmondPowerplant" />
+				<ref bean="HelmondPromestVkcPowerplant" />
+				<ref bean="CuijkBiomassPowerplant" />
+				<ref bean="ZeelandGreenhousePowerplant" />
+				<ref bean="BiddinghuizenWindstPowerplant" />
+				<ref bean="Ooltgensplaat1Powerplant" />
+				<ref bean="EemmeerdijkPowerplant" />
+				<ref bean="LelystadMwPowerplant" />
+				<ref bean="JaapRodenburgPowerplant" />
+				<ref bean="MiddenmeerKesgroPowerplant" />
+				<ref bean="AlphenPowerplant" />
+				<ref bean="TexelTebhinPowerplant" />
+				<ref bean="SlufterdamWestPowerplant" />
+				<ref bean="SlufterdamNoordPowerplant" />
 			</set>
 		</property>
 		<property name="nodes">

@@ -77,6 +77,9 @@ public class PowerPlant {
 	private double actualEfficiency;
 	private double expectedEndOfLife;
 	private double actualNominalCapacity;
+	private long yearFirstOperational;
+	private String substation;
+	private String name;
 
 	public boolean isOperational(long currentTick) {
 
@@ -319,12 +322,18 @@ public class PowerPlant {
 		this.dismantleTime = dismantleTime;
 	}
 
+	/*
+	 * public String getName() { return label; }
+	 * 
+	 * public void setName(String label) { this.label = label; }
+	 */
+
 	public String getName() {
-		return label;
+		return name;
 	}
 
-	public void setName(String label) {
-		this.label = label;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getLabel() {
@@ -538,6 +547,22 @@ public class PowerPlant {
 	 */
 	public void setActualNominalCapacity(double actualNominalCapacity) {
 		this.actualNominalCapacity = actualNominalCapacity;
+	}
+
+	public long getYearFirstOperational() {
+		return yearFirstOperational;
+	}
+
+	public void setYearFirstOperational(long yearFirstOperational) {
+		this.yearFirstOperational = yearFirstOperational;
+	}
+
+	public String getSubstation() {
+		return substation;
+	}
+
+	public void setSubstation(String substation) {
+		this.substation = substation;
 	}
 
 }
